@@ -60,6 +60,7 @@
     "ember-cli-deploy-cloudfront": "^0.2.8",
     "ember-cli-deploy-gzip": "^0.2.4",
     "ember-cli-deploy-manifest": "^0.1.2",
-    "ember-cli-deploy-s3": "^0.4.0"
+    "ember-cli-deploy-s3": "^0.4.0",
+    "ember-m3": "ssh://github.com/hjdivad/ember-m3"
   }
 }

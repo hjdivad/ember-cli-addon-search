@@ -51,6 +51,7 @@ module.exports = function(defaults) {
 
   if (AIRPLANE_MODE) {
     app.import('vendor/airplane-mode/addons.json', { destDir: 'assets' });
+    app.import('vendor/airplane-mode/addons-jsonapi.json', { destDir: 'assets' });
     app.import('vendor/airplane-mode/gravatar.jpg', { destDir: 'assets' });
   }
 

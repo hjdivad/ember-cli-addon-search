@@ -10,7 +10,9 @@ const { localeCompare } = String.prototype;
 function prebuildGet(path) {
   let split = path.split('.');
 
-  return function(obj) {
+  return function(model) {
+    let obj = model.debugJSON();
+
     for (let i =0; i < split.length; i++) {
       let key = split[i];
       if (typeof obj !== 'object') {

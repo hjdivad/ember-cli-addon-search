@@ -12,7 +12,9 @@ export default Route.extend({
   },
 
   model() {
-    return this.store.findAll('package');
+    // return this.store.findAll('package');
+    // return this.store.queryURL('https://io-builtwithember-addons-data.s3.amazonaws.com/addons.json');
+    return this.store.queryURL('/assets/addons-jsonapi.json');
   },
 
   afterModel() {

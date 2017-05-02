@@ -1,0 +1,32 @@
+#!/usr/bin/env node
+
+// ./bin/to-jsonapi vendor/airplane-mode/addons.json > vendor/airplane-mode/addons-jsonapi.json
+
+const fs = require('fs');
+
+function convertJSON(json) {
+  let id = 0;
+
+  let result = {
+    data: null
+  };
+
+  result.data = json.map((attributes) => {
+    return {
+      id: id++,
+      type: 'package',
+      attributes
+    };
+  });
+
+  return result;
+}
+
+function convertJSONFile({ path }) {
+  let input = JSON.parse(fs.readFileSync(path));
+  return convertJSON(input);
+}
+
+const path = process.argv[2];
+let result = convertJSONFile({ path });
+console.log(JSON.stringify(result, null, 2));

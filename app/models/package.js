@@ -1,14 +1,16 @@
-import DS from 'ember-data';
-const { attr } = DS;
+throw new Error(`don't import model`);
 
-export default DS.Model.extend({
-  _npmUser: attr(),
-  author: attr(),
-  demoURL: attr(),
-  description: attr(),
-  downloads: attr(),
-  emberObserver: attr(),
-  github: attr(),
-  name: attr(),
-  time: attr()
-});
+// import DS from 'ember-data';
+// const { attr } = DS;
+
+// export default DS.Model.extend({
+//   _npmUser: attr(),
+//   author: attr(),
+//   demoURL: attr(),
+//   description: attr(),
+//   downloads: attr(),
+//   emberObserver: attr(),
+//   github: attr(),
+//   name: attr(),
+//   time: attr()
+// });
